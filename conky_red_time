@@ -1,0 +1,31 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = 'A01515',
+	cpu_avg_samples = 2,
+	default_color = 'F9FAF9',
+	double_buffer = true,
+	font = 'HanWangShinSuMedium:size=88',
+	draw_shades = false,
+	gap_x = 40,
+	gap_y = 40,
+	minimum_width = 740,
+	minimum_height = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 1.0,
+	use_xft = true,
+}
+conky.text = [[
+#${color2}${goto 415}${font HanWangShinSuMedium:size=76}${execi 300 LANG=zh_TW.UTF-8 LC_TIME=zh_TW.UTF-8 date +%p | cut -b -3}
+#${goto 415}${voffset -20}午
+#${voffset -180}${goto 0}${font HanWangShinSuMedium:size=200}${color}${time %l}${font}${color2}:${color}${time %M}
+#${image /home/loulou/Pictures/dry-brush-stroke-1.png -s 120x280 -p 400,5}
+
+${voffset -100}${goto 20}${color2}${font HanWangShinSuMedium:size=64}${execi 300 LANG=zh_TW.UTF-8 LC_TIME=zh_TW.UTF-8 date +%p | cut -b -3}${font HanWangShinSuMedium:size=200}${time %l}${font}:${time %M}${font HanWangShinSuMedium:size=48}分
+${goto 20}${font HanWangShinSuMedium:size=64}${voffset -160}午
+${goto 280}${font HanWangShinSuMedium:size=48}${voffset -120}點
+${image /home/loulou/Pictures/dry-brush-stroke-1.png -s 720x320 -p 0,5}
+]]

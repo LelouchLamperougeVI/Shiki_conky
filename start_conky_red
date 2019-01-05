@@ -1,0 +1,6 @@
+#!/bin/bash
+
+conky -c /usr/share/conky/conky_red &&
+conky -c /usr/share/conky/conky_red_time &&
+
+exit 0
